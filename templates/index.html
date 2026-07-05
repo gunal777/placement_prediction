@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Student Placement Prediction</h1>
+
+    <form action="/predict" method="POST">
+
+        <label>CGPA</label>
+        <input type="number" step="0.01" name="cgpa" required>
+
+        <label>Attendance (%)</label>
+        <input type="number" min="0" max="100" name="attendance" required>
+
+        <label>10th Percentage</label>
+        <input type="number" min="0" max="100" name="ssc" required>
+
+        <label>12th Percentage</label>
+        <input type="number" min="0" max="100" name="hsc" required>
+
+        <label>Number of Projects</label>
+        <input type="number" min="0" name="projects" required>
+
+        <label>Number of Internships</label>
+        <input type="number" min="0" name="internships" required>
+
+        <button type="submit">Predict Placement</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
